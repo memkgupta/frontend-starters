@@ -24,6 +24,9 @@ export const setAuthTokens = (token: string, refreshToken: string): void => {
 export const getAuthToken = (): string | undefined => {
   return Cookies.get(TOKEN_COOKIE);
 };
+export const getRefreshToken = ():string | undefined =>{
+  return Cookies.get(REFRESH_TOKEN_COOKIE)
+}
 export const removeAuthTokens = (): void => {
   Cookies.remove(TOKEN_COOKIE, { path: '/' });
   Cookies.remove(REFRESH_TOKEN_COOKIE, { path: '/' });

@@ -46,7 +46,7 @@ if (!aError.response) {
       toast.error("Server error. Try again later.");
     }
         
-        return Promise.reject(msg);
+        return Promise.reject(aError);
     }
 )
 export default api
